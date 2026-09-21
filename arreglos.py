@@ -23,3 +23,12 @@ print(numeros)
 fruta = ["Manzana", "Fresa", "Sandia", "Mango", "Melon", "Platano"]
 fruta.pop(4)
 print(fruta)
+
+arreglo = []  
+
+
+n = int(input("Ingresa el tamano del arregk=lo: "))
+
+for i in range(n):
+    dato = int(input("Ingrese un numero :"))
+    arreglo("El arreglo es:", arreglo")
