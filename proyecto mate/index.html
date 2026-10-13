@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raster 10x10</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ======================================
+             TÍTULO
+        ======================================= -->
+
+        <h1>Raster 10×10 y color por Z</h1>
+
+
+        <!-- ======================================
+             CONTROLES
+        ======================================= -->
+
+        <div class="panel-controles">
+
+            <h2>Coordenadas del punto (X, Y) [0-9]</h2>
+
+
+            <div class="campos">
+
+                <div class="campo">
+
+                    <label for="coordenadaX">
+                        X (0-9)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="coordenadaX"
+                        min="0"
+                        max="9"
+                        value="3"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="coordenadaY">
+                        Y (0-9)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="coordenadaY"
+                        min="0"
+                        max="9"
+                        value="6"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDENAR -->
+
+            <div class="opcion">
+
+                <input
+                    type="checkbox"
+                    id="ordenarXY"
+                >
+
+                <label for="ordenarXY">
+                    Ordenar X,Y
+                </label>
+
+            </div>
+
+
+            <!-- VALOR Z -->
+
+            <div class="campo campo-z">
+
+                <label for="valorZ">
+                    Valor Z del punto (puede ser negativo o positivo)
+                </label>
+
+                <input
+                    type="number"
+                    id="valorZ"
+                    step="0.1"
+                    value="13.8"
+                >
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="botones">
+
+                <button
+                    id="btnAplicar"
+                    class="btn-aplicar"
+                >
+                    Aplicar punto X,Y,Z
+                </button>
+
+
+                <button
+                    id="btnRandom"
+                    class="btn-random"
+                >
+                    Randomizar todo el raster
+                </button>
+
+            </div>
+
+
+            <!-- MINIMO Y MAXIMO -->
+
+            <div class="estadisticas">
+
+                <span>
+                    Z min:
+                    <strong id="zMin">0.00</strong>
+                </span>
+
+                <span>
+                    Z máx:
+                    <strong id="zMax">0.00</strong>
+                </span>
+
+            </div>
+
+
+            <!-- PALETA -->
+
+            <div class="paleta-contenedor">
+
+                <h2>Paleta (10 colores de azul → rojo)</h2>
+
+                <div
+                    id="paleta"
+                    class="paleta"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             RASTER
+        ======================================= -->
+
+        <div class="raster-contenedor">
+
+            <div class="raster">
+
+                <!-- ESQUINA SUPERIOR IZQUIERDA -->
+                <div class="esquina"></div>
+
+
+                <!-- NÚMEROS X -->
+                <div
+                    id="ejeX"
+                    class="eje-x"
+                >
+                </div>
+
+
+                <!-- NÚMEROS Y -->
+                <div
+                    id="ejeY"
+                    class="eje-y"
+                >
+                </div>
+
+
+                <!-- MATRIZ -->
+                <div
+                    id="matriz"
+                    class="matriz"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

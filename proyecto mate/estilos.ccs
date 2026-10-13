@@ -1,0 +1,514 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+.contenedor {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+h1 {
+
+    text-align: center;
+
+    color: #222;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   PANEL DE CONTROLES
+========================================== */
+
+.panel-controles {
+
+    width: 100%;
+
+    background-color: #fafafa;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.panel-controles h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+
+/* ==========================================
+   CAMPOS X Y
+========================================== */
+
+.campos {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.campo label {
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    color: #444;
+}
+
+
+.campo input {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+.campo input:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.opcion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.opcion input {
+
+    width: 16px;
+
+    height: 16px;
+}
+
+
+/* ==========================================
+   VALOR Z
+========================================== */
+
+.campo-z {
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.botones {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.botones button {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-aplicar {
+
+    background-color: #555;
+}
+
+
+.btn-aplicar:hover {
+
+    background-color: #333;
+}
+
+
+.btn-random {
+
+    background-color: #777;
+}
+
+
+.btn-random:hover {
+
+    background-color: #555;
+}
+
+
+/* ==========================================
+   ESTADÍSTICAS
+========================================== */
+
+.estadisticas {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+}
+
+
+.estadisticas strong {
+
+    color: #222;
+}
+
+
+/* ==========================================
+   PALETA
+========================================== */
+
+.paleta-contenedor h2 {
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.paleta {
+
+    display: flex;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 28px;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+
+.color-paleta {
+
+    flex: 1;
+
+    height: 100%;
+}
+
+
+/* ==========================================
+   RASTER
+========================================== */
+
+.raster-contenedor {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+    overflow-x: auto;
+}
+
+
+.raster {
+
+    display: grid;
+
+    grid-template-columns: 35px 600px;
+
+    grid-template-rows: 30px 600px;
+
+    position: relative;
+}
+
+
+/* ==========================================
+   ESQUINA
+========================================== */
+
+.esquina {
+
+    grid-column: 1;
+
+    grid-row: 1;
+}
+
+
+/* ==========================================
+   EJE X
+========================================== */
+
+.eje-x {
+
+    grid-column: 2;
+
+    grid-row: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   EJE Y
+========================================== */
+
+.eje-y {
+
+    grid-column: 1;
+
+    grid-row: 2;
+
+    display: grid;
+
+    grid-template-rows: repeat(10, 1fr);
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   MATRIZ
+========================================== */
+
+.matriz {
+
+    grid-column: 2;
+
+    grid-row: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+
+    grid-template-rows: repeat(10, 1fr);
+
+    width: 600px;
+
+    height: 600px;
+
+    border: 1px solid #ccc;
+}
+
+
+/* ==========================================
+   CELDAS
+========================================== */
+
+.celda {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    font-size: 12px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.celda:hover {
+
+    transform: scale(1.03);
+
+    border: 2px solid white;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   DESCRIPCIÓN
+========================================== */
+
+.descripcion {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background-color: #f7f7f7;
+
+    border-radius: 8px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.descripcion p {
+
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 10px;
+    }
+
+
+    .contenedor {
+
+        padding: 15px;
+    }
+
+
+    .campos {
+
+        flex-direction: column;
+    }
+
+
+    .botones {
+
+        flex-direction: column;
+    }
+
+
+    .estadisticas {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .raster {
+
+        grid-template-columns: 25px 500px;
+
+        grid-template-rows: 25px 500px;
+    }
+
+
+    .matriz {
+
+        width: 500px;
+
+        height: 500px;
+    }
+}
